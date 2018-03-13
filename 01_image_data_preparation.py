@@ -29,7 +29,7 @@ def extract_features(directory):    # extract features from each photo in the di
 		print('>%s' % name)
 	return features
 
-directory = 'Flicker8k_Dataset' # extract features from all images
+directory = '../Flicker8k_Dataset' # extract features from all images
 features = extract_features(directory)
 print('Extracted Features: %d' % len(features))
 dump(features, open('features.pkl', 'wb'))  # save to file

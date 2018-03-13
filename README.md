@@ -18,6 +18,8 @@ This chapter is a resume of the actual post's content.
 
 2. Preparation of the data (photo + text)
 
+__PHOTO__
+
 - use of a pre-trained model
   - Keras already provides such a model
   - Oxford Visual Geometry, VGG (which is used here), ..
@@ -27,22 +29,84 @@ This chapter is a resume of the actual post's content.
   - gain of time
 
 ```python
-# 01_data_preparation.py
+# 01_image_data_preparation.py
 
-  extract_features(dir_name)  
+  def extract_features(dir_name):  
   """
-  param: dir_name
+  param:  dir_name
   return: features
 
   This function does the following:
     - loads the model, restructures & summarizes it
-    - in the loop: loads an image from a given picture file, converts its pixels to an array (numpy), reshapes & prepares the image for the VGG model, finally retrieves the features and stores it using the image id (so that we know which photo's features they are)
+    - in the loop:
+      - loads an image from a given picture file
+      - converts its pixels to an array (numpy)
+      - reshapes & prepares the image for the VGG model
+      - finally retrieves the features and stores it using the image id
+      (so that we know which photo's features they are)
     - returns a dictionary containing the features retrieved from all the images
   """
+    pass # complete code in the file
 ```
 
 - internal representation is done before the classification is made !
   - extraction by the model
+
+__TEXT__
+
+- each photo has several descriptions
+- these descriptions have to be cleaned beforehand
+
+```python
+  # 02_text_data_preparation.py
+
+  def load_doc(filename): # LOAD FILE CONTENT
+  """
+  param:  filename
+  return: text
+
+  This function does the following:
+    - retrives all the text contained in the descriptions' file
+    - returns the retrieved (loading into the memory)
+  """
+    pass # complete code in the file
+
+  def load_description(doc):  # TOKENIZE id + descriptions
+    """
+    param:  doc (= text returned by the function above)
+    return: mapping
+
+    This function does the following:
+      - creates a dictionary which will contain
+        - the image identifier
+        - the image description
+      - retrieve the id and the description (parsing)
+        - line composition : [image_id] space [description] new line
+        - dictionary: mapping[image_id] = [description_1, description_2, ..]
+      - returns the resulting dictionary
+    """
+      pass # complete code in the file
+
+    def clean_descriptions(descriptions): # REMOVE UNNECESSARY INFORMATION
+      """
+      param:  descriptions
+      return: none
+
+      This function cleans the unnecessary information:
+        - the sentence is cut into words (tokenization) then converted to lowercase
+        - the punctuation is removed as well as the remaining a and s
+          (we could also remove the other determinants here..)
+        - the numbers are removed too
+      """
+      pass # complete code in the file
+
+    def to_vocabulary(descriptions):
+      """
+
+      """
+      pass # complete code in the filel
+```
+
 
 3. Deep learning model development
 4. Model evaluation
