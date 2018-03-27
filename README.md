@@ -32,25 +32,33 @@ __PHOTO__
 # 01_image_data_preparation.py
 
   def extract_features(dir_name):  
-  """
-  param:  dir_name
-  return: features
+    """
+    param:  dir_name
+    return: features
 
-  This function does the following:
-    - loads the model, restructures & summarizes it
-    - in the loop:
-      - loads an image from a given picture file
-      - converts its pixels to an array (numpy)
-      - reshapes & prepares the image for the VGG model
-      - finally retrieves the features and stores it using the image id
-      (so that we know which photo's features they are)
-    - returns a dictionary containing the features retrieved from all the images
-  """
+    This function does the following:
+      - loads the model, restructures & summarizes it
+      - in the loop:
+        - loads an image from a given picture file
+        - converts its pixels to an array (numpy)
+        - reshapes & prepares the image for the VGG model
+        - finally retrieves the features and stores it using the image id
+        (so that we know which photo's features they are)
+      - returns a dictionary containing the features retrieved from all the images
+    """
     pass # complete code in the file
 ```
 
 - internal representation is done before the classification is made !
   - extraction by the model
+  
+- run the file on the terminal to prepare the image data contained in Flick'r8k directory using the following command (may take a while):
+```
+  python 01_text_data_preparation.py
+```
+  - it should look like this:
+
+![While running the file](https://i.imgur.com/RqOYJdG.png)
 
 __TEXT__
 
@@ -61,14 +69,14 @@ __TEXT__
   # 02_text_data_preparation.py
 
   def load_doc(filename): # LOAD FILE CONTENT
-  """
-  param:  filename
-  return: text
+    """
+    param:  filename
+    return: text
 
-  This function does the following:
-    - retrives all the text contained in the descriptions' file
-    - returns the retrieved (loading into the memory)
-  """
+    This function does the following:
+      - retrives all the text contained in the descriptions' file
+      - returns the retrieved (loading into the memory)
+    """
     pass # complete code in the file
 
   def load_description(doc):  # TOKENIZE id + descriptions
@@ -143,6 +151,6 @@ __TEXT__
 - http://www.cs.toronto.edu/~frossard/post/vgg16/
 - https://keras.io/applications/
 
-## TenserFlow examples
+## TensorFlow examples
 - https://github.com/DeepRNN/image_captioning
 - https://github.com/yunjey/show-attend-and-tell
