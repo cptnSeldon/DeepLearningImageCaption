@@ -102,9 +102,21 @@ __TEXT__
 
     def to_vocabulary(descriptions):
       """
+      param:  descriptions
+      return: all descriptions
 
+      Creates a list containing all the descriptions in string.
       """
-      pass # complete code in the filel
+      pass # complete code in the file
+
+    def save_descriptions(descriptions, filename):
+      """
+      param:  descriptions, filename
+      return: none
+
+      Saves the descriptions' list in the given file.
+      """
+      pass
 ```
 
 
@@ -130,3 +142,7 @@ __TEXT__
 - http://caffe.berkeleyvision.org/model_zoo.html
 - http://www.cs.toronto.edu/~frossard/post/vgg16/
 - https://keras.io/applications/
+
+## TenserFlow examples
+- https://github.com/DeepRNN/image_captioning
+- https://github.com/yunjey/show-attend-and-tell
