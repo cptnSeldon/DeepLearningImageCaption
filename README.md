@@ -51,14 +51,16 @@ __PHOTO__
 
 - internal representation is done before the classification is made !
   - extraction by the model
-  
+
 - run the file on the terminal to prepare the image data contained in Flick'r8k directory using the following command (may take a while):
 ```
   python 01_text_data_preparation.py
 ```
   - it should look like this:
 
-![While running the file](https://i.imgur.com/RqOYJdG.png)
+![While running the file](https://i.imgur.com/RqOYJdG.png
+
+/!\ warning : h5py and Pillow have to be installed as well (foundable in the requirements)
 
 __TEXT__
 
@@ -127,8 +129,15 @@ __TEXT__
       pass
 ```
 
+Loaded: 8,092
+Vocabulary Size: 8,763
 
 3. Deep learning model development
+
+Loading Data.
+Defining the Model.
+Fitting the Model.
+
 4. Model evaluation
 5. Caption generation
 

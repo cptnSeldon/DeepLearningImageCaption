@@ -4,6 +4,7 @@
 # https://machinelearningmastery.com/develop-a-deep-learning-caption-generation-model-in-python/
 from os import listdir
 from pickle import dump
+import h5py
 
 from keras.applications.vgg16 import VGG16
 from keras.preprocessing.image import load_img
@@ -49,3 +50,4 @@ if __name__ == "__main__":
     features = extract_features(directory)
     print('Extracted Features: %d' % len(features))
     dump(features, open('features.pkl', 'wb')) # save to file
+l
